@@ -21,14 +21,14 @@ python main.py off
 Control specific IPs (override file values):
 
 ```powershell
-python main.py on --ips 192.168.0.193 192.168.0.195
-python main.py off --ips 192.168.0.196
+python main.py on --address 192.168.0.193 192.168.0.195
+python main.py off --address 192.168.0.196
 ```
 
 Use a custom IP file:
 
 ```powershell
-python main.py on --ips-file .\my-plugs.txt
+python main.py on --address-file .\my-plugs.txt
 ```
 
 ## Notes
