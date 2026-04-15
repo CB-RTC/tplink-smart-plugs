@@ -1,5 +1,5 @@
-from tplink_smart_plugs.cli import main
+from tplink_smart_plugs.cli import order_66
 
 
 if __name__ == "__main__":
-    main()
+    order_66()

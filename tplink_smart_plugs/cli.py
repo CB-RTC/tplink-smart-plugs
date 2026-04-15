@@ -28,7 +28,7 @@ def resolve_target_ips(args: argparse.Namespace) -> list[str]:
     return load_addresses(args.address_file)
 
 
-def main() -> None:
+def order_66() -> None:
     args = parse_args()
     target_state = args.action == "on"
 
