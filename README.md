@@ -2,10 +2,7 @@
 
 Control TP-Link smart plugs directly over a raw TCP socket using TP-Link's XOR protocol.
 
-Default plug IPs are:
-- `192.168.0.193`
-- `192.168.0.195`
-- `192.168.0.196`
+By default, plug IPs are read from `ips.txt` (one IP per line).
 
 ## Usage
 
@@ -21,14 +18,21 @@ Turn all default plugs off:
 python main.py off
 ```
 
-Control specific IPs:
+Control specific IPs (override file values):
 
 ```powershell
 python main.py on --ips 192.168.0.193 192.168.0.195
 python main.py off --ips 192.168.0.196
 ```
 
+Use a custom IP file:
+
+```powershell
+python main.py on --ips-file .\my-plugs.txt
+```
+
 ## Notes
 
 - Uses TCP port `9999`.
 - Devices must be reachable on the local network.
+- Runtime entrypoint is `main.py`, with logic split into modules under `tplink_smart_plugs/`.
